@@ -6,8 +6,8 @@
 Copy `.env.example` to `.env` and configure:
 ```
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_secure_jwt_secret_key
+MONGODB_URI=mongodb+srv://YOUR_DB_USER:YOUR_DB_PASSWORD@your-cluster.mongodb.net/notesapp
+JWT_SECRET=your_super_secure_random_jwt_secret_here
 ```
 
 ### Frontend (.env)

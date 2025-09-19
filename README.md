@@ -84,8 +84,8 @@ These credentials are displayed on the login page for easy access.
 ### Backend (.env)
 ```
 PORT=5000
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/notesapp
-JWT_SECRET=your_secure_jwt_secret_key_here
+MONGODB_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@your-cluster.mongodb.net/notesapp
+JWT_SECRET=your_super_secure_random_jwt_secret_key_here
 ```
 
 ### Frontend (.env)
