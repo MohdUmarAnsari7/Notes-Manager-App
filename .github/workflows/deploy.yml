@@ -31,7 +31,7 @@ jobs:
         cd frontend
         npm run build
       env:
-        REACT_APP_API_URL: https://your-backend-url.herokuapp.com/api
+        REACT_APP_API_URL: https://notes-manager-backend.herokuapp.com/api
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

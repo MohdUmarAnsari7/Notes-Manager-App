@@ -4,7 +4,7 @@
   "description": "Frontend React app for Notes Manager - A full-stack note-taking application",
   "author": "Umar Ansari",
   "license": "MIT",
-  "homepage": ".",
+  "homepage": "https://mohdumaransari7.github.io/Notes-Manager-App",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
