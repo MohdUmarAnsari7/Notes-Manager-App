@@ -3,8 +3,6 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -31,7 +29,7 @@ jobs:
         cd frontend
         npm run build
       env:
-        REACT_APP_API_URL: https://notes-manager-backend.herokuapp.com/api
+        REACT_APP_API_URL: http://localhost:5000/api
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
