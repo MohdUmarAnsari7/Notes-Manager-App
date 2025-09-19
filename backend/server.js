@@ -14,7 +14,7 @@ const app = express();
 // CORS configuration
 const corsOptions = {
   origin: isProduction 
-    ? ['https://your-frontend-domain.netlify.app', 'https://your-frontend-domain.vercel.app']
+    ? true // Allow same origin in production (since we're serving React from same server)
     : ['http://localhost:3000'],
   credentials: true
 };
@@ -38,9 +38,19 @@ mongoose.connect(MONGODB_URI)
 app.use('/api/auth', authRoutes);
 app.use('/api/notes', noteRoutes);
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Notes Manager API is running!' });
-});
+// Serve static files from React app in production
+if (isProduction) {
+  const path = require('path');
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+  
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+  });
+} else {
+  app.get('/', (req, res) => {
+    res.json({ message: 'Notes Manager API is running!' });
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

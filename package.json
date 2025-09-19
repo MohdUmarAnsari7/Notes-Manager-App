@@ -1,0 +1,22 @@
+{
+  "name": "notes-manager-app",
+  "version": "1.0.0",
+  "description": "Full-stack note-taking application with React frontend and Node.js backend",
+  "scripts": {
+    "install-client": "cd frontend && npm install",
+    "install-server": "cd backend && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "dev-server": "cd backend && npm run dev",
+    "dev-client": "cd frontend && npm start",
+    "render-build": "npm run install-all && npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": ["notes", "react", "nodejs", "mongodb", "full-stack"],
+  "author": "Umar Ansari",
+  "license": "MIT"
+}
