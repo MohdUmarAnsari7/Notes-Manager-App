@@ -14,9 +14,11 @@ const app = express();
 // CORS configuration
 const corsOptions = {
   origin: isProduction 
-    ? true // Allow same origin in production (since we're serving React from same server)
-    : ['http://localhost:3000'],
-  credentials: true
+    ? true // Allow same origin in production
+    : ['http://localhost:3000', 'http://localhost:3001', 'https://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 };
 
 app.use(cors(corsOptions));
