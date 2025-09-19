@@ -112,7 +112,6 @@ Notes-Manager-App/
 │   ├── routes/              # API routes
 │   ├── server.js           # Main server file
 │   └── package.json
-├── DEPLOYMENT.md            # Deployment guide
 └── README.md               # This file
 ```
 
@@ -144,7 +143,6 @@ Notes-Manager-App/
 2. Deploy the `build` folder
 3. Set environment variable: `REACT_APP_API_URL`
 
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md)
 
 ## 🤝 Contributing
 
