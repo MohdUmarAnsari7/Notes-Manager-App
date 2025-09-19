@@ -9,11 +9,18 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "prod": "cross-env NODE_ENV=production node server.js",
     "build": "echo 'No build step required for backend'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["notes", "api", "mongodb", "express", "jwt"],
+  "keywords": [
+    "notes",
+    "api",
+    "mongodb",
+    "express",
+    "jwt"
+  ],
   "author": "Umar Ansari",
   "license": "MIT",
   "dependencies": {
@@ -25,6 +32,7 @@
     "mongoose": "^8.18.1"
   },
   "devDependencies": {
+    "cross-env": "^10.0.0",
     "nodemon": "^3.1.10"
   }
 }
